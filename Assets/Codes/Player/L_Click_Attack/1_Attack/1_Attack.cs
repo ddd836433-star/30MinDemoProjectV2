@@ -6,6 +6,7 @@ public class Attack_1 : MonoBehaviour
 
     private AD_Move AD_MoveScript;
     private Space_Jump Space_JumpScript;
+    private Combo_Attack Combo_AttackScript ;
     
     void Start()
     {
@@ -13,6 +14,7 @@ public class Attack_1 : MonoBehaviour
 
         AD_MoveScript = GetComponent<AD_Move>();
         Space_JumpScript = GetComponent<Space_Jump>();
+        Combo_AttackScript = GetComponent<Combo_Attack>() ;
 
     }
 
@@ -20,21 +22,13 @@ public class Attack_1 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) 
             && !AD_MoveScript.isAttacking
-            && Space_JumpScript.isGrounded)
+            && Space_JumpScript.isGrounded
+            && !Combo_AttackScript.canCombo)
         {
             AttackAnimator_1.SetBool("isAttack_1", true);
 
             AD_MoveScript.isAttacking = true;
 
-            Invoke(nameof(EndAttacking), 0.5f);
-
         } 
-    }
-
-    private void EndAttacking()
-    {
-        AttackAnimator_1.SetBool("isAttack_1", false);
-
-        AD_MoveScript.isAttacking = false;
     }
 }

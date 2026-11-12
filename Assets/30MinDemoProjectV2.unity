@@ -274,6 +274,8 @@ GameObject:
   - component: {fileID: 1134696816}
   - component: {fileID: 1134696817}
   - component: {fileID: 1134696818}
+  - component: {fileID: 1134696819}
+  - component: {fileID: 1134696820}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -505,6 +507,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8bc9150a7636948b4b91077bc53c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attack_1
+--- !u!114 &1134696819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134696809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddfad8fe0653a3499996ea3945234ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Combo_Attack
+  canCombo: 0
+  isFinishCombo: 0
+--- !u!114 &1134696820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134696809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a52b2d15a3fe547a3f7712d901b8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Attack_2
 --- !u!1 &1334914128
 GameObject:
   m_ObjectHideFlags: 0
