@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 1134696815}
   - component: {fileID: 1134696816}
   - component: {fileID: 1134696817}
+  - component: {fileID: 1134696818}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -464,6 +465,7 @@ MonoBehaviour:
   MoveSpeed: 5
   MoveInput: 0
   isDashing: 0
+  isAttacking: 0
 --- !u!114 &1134696816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +493,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shift_Dafh
   DashSpeed: 15
+--- !u!114 &1134696818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134696809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8bc9150a7636948b4b91077bc53c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Attack_1
 --- !u!1 &1334914128
 GameObject:
   m_ObjectHideFlags: 0

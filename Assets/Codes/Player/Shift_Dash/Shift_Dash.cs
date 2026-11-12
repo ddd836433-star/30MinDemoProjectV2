@@ -39,7 +39,7 @@ public class Shift_Dash : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (NowDashing)
+        if (NowDashing && !AD_MoveScript.isAttacking)
             DashRigidbody.linearVelocity = new Vector2(AD_MoveScript.MoveInput * DashSpeed, DashRigidbody.linearVelocity.y);
     }
 

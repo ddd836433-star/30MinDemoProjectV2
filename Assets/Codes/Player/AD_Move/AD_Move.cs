@@ -11,6 +11,7 @@ public class AD_Move : MonoBehaviour
     public float MoveInput;
 
     public bool isDashing = false;
+    public bool isAttacking = false;
     
     void Start()
     {
@@ -50,7 +51,10 @@ public class AD_Move : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDashing == false)
+        if (isAttacking)
+            MoveRigidbody.linearVelocity = new Vector2(0, 0);
+
+        if (isDashing == false && isAttacking == false)
             MoveRigidbody.linearVelocity = new Vector2(MoveSpeed * MoveInput, MoveRigidbody.linearVelocity.y);
 
     }
