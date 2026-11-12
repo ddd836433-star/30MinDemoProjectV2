@@ -6,6 +6,7 @@ public class Space_Jump : MonoBehaviour
     private Animator JumpAnimator;
 
     private bool isJumped = false;
+    private bool isGrounded = false;
 
     public float JumpForce = 5f ;
     
@@ -18,12 +19,17 @@ public class Space_Jump : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             isJumped = true;
 
-            JumpAnimator.SetTrigger("isJump");
-        } 
+            JumpAnimator.SetBool("isJump", true);
+
+        } else
+        {
+            JumpAnimator.SetBool("isJump", false);
+
+        }
     }
 
     void FixedUpdate()
@@ -33,6 +39,17 @@ public class Space_Jump : MonoBehaviour
             JumpRigidbody.linearVelocity = new Vector2(JumpRigidbody.linearVelocity.x, JumpForce);
 
             isJumped = false;
+
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGrounded = true;
+    }
+
+    void OnCollisionExit2D(Collision2D collsion)
+    {
+        isGrounded = false;
     }
 }
