@@ -6,7 +6,7 @@ public class Space_Jump : MonoBehaviour
     private Animator JumpAnimator;
 
     private bool isJumped = false;
-    private bool isGrounded = false;
+    public bool isGrounded = false;
 
     public float JumpForce = 5f ;
     

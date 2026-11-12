@@ -8,13 +8,16 @@ public class AD_Move : MonoBehaviour
 
     public float MoveSpeed = 5f;
 
-    private float MoveInput;
+    public float MoveInput;
+
+    public bool isDashing = false;
     
     void Start()
     {
         MoveAnimator = GetComponent<Animator>();
         MoveSpriteRenderer = GetComponent<SpriteRenderer>();
         MoveRigidbody = GetComponent<Rigidbody2D>();
+
     }
 
     
@@ -27,6 +30,7 @@ public class AD_Move : MonoBehaviour
             MoveSpriteRenderer.flipX = false;
 
             MoveAnimator.SetBool("isMove", true);
+
         } 
         
         if (MoveInput < 0)
@@ -34,16 +38,20 @@ public class AD_Move : MonoBehaviour
             MoveSpriteRenderer.flipX = true;
 
             MoveAnimator.SetBool("isMove", true);
+
         }
 
         if (MoveInput == 0)
         {
             MoveAnimator.SetBool("isMove", false);
+
         }
     }
 
     void FixedUpdate()
     {
-        MoveRigidbody.linearVelocity = new Vector2(MoveSpeed * MoveInput, MoveRigidbody.linearVelocity.y);
+        if (isDashing == false)
+            MoveRigidbody.linearVelocity = new Vector2(MoveSpeed * MoveInput, MoveRigidbody.linearVelocity.y);
+
     }
 }
