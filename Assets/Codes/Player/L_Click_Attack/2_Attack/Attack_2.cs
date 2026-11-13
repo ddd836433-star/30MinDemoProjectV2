@@ -5,8 +5,6 @@ public class Attack_2 : MonoBehaviour
     private Animator AttackAnimator_2;
     private Combo_Attack ComboAttackScript;
     private AD_Move AD_MoveScript ;
-
-    private bool ComboStack = false ;
     
     void Start()
     {
@@ -25,8 +23,6 @@ public class Attack_2 : MonoBehaviour
             {
                 AttackAnimator_2.SetBool("isAttack_1", false);
                 AttackAnimator_2.SetBool("isAttack_2", true);
-
-                ComboStack = true ;
 
             } 
         }

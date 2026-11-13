@@ -28,7 +28,8 @@ public class AD_Move : MonoBehaviour
 
         if (MoveInput > 0)
         {
-            MoveSpriteRenderer.flipX = false;
+            if (!isAttacking)
+                MoveSpriteRenderer.flipX = false;
 
             MoveAnimator.SetBool("isMove", true);
 
@@ -36,7 +37,8 @@ public class AD_Move : MonoBehaviour
         
         if (MoveInput < 0)
         {
-            MoveSpriteRenderer.flipX = true;
+            if (!isAttacking)
+                MoveSpriteRenderer.flipX = true;
 
             MoveAnimator.SetBool("isMove", true);
 
@@ -51,8 +53,9 @@ public class AD_Move : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isAttacking)
+        if (isAttacking) {
             MoveRigidbody.linearVelocity = new Vector2(0, 0);
+        }
 
         if (isDashing == false && isAttacking == false)
             MoveRigidbody.linearVelocity = new Vector2(MoveSpeed * MoveInput, MoveRigidbody.linearVelocity.y);
