@@ -5,9 +5,13 @@ public class Attack_2 : MonoBehaviour
     private Animator AttackAnimator_2;
     private Combo_Attack ComboAttackScript;
     private AD_Move AD_MoveScript ;
+
+    public GameObject hitboxObject_2 ;
     
     void Start()
     {
+        hitboxObject_2.SetActive(false) ;
+
         AttackAnimator_2 = GetComponent<Animator>();
 
         ComboAttackScript = GetComponent<Combo_Attack>() ;
@@ -33,5 +37,15 @@ public class Attack_2 : MonoBehaviour
             AD_MoveScript.isAttacking = false ;
 
         }
+    }
+
+    public void isTurnOnHitbox_2() {
+        hitboxObject_2.SetActive(true) ;
+
+    }
+
+    public void isTurnOffHitbox_2() {
+        hitboxObject_2.SetActive(false) ;
+
     }
 }

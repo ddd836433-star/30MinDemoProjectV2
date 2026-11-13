@@ -15,6 +15,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("공격 히트박스 활성화" + other.name) ;
+        Debug.Log("공격 히트박스 활성화 + " + other.name) ;
     }
 }

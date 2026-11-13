@@ -16,6 +16,10 @@ public class AD_Move : MonoBehaviour
     public Transform hitboxTransform ;
     private Vector3 hitboxStartPosition ;
     private Vector3 hitboxStartScale ;
+
+    public Transform hitboxTransform_2 ;
+    private Vector3 hitboxStartPosition_2 ;
+    private Vector3 hitboxStartScale_2 ;
     
     void Start()
     {
@@ -25,6 +29,9 @@ public class AD_Move : MonoBehaviour
 
         hitboxStartPosition = hitboxTransform.localPosition ;
         hitboxStartScale = hitboxTransform.localScale ;
+
+        hitboxStartPosition_2 = hitboxTransform_2.localPosition ;
+        hitboxStartScale_2 = hitboxTransform_2.localScale ;
 
     }
 
@@ -41,6 +48,9 @@ public class AD_Move : MonoBehaviour
                 hitboxTransform.localPosition = hitboxStartPosition ;
                 hitboxTransform.localScale = hitboxStartScale ;
 
+                hitboxTransform_2.localPosition = hitboxStartPosition_2 ;
+                hitboxTransform_2.localScale = hitboxStartScale_2 ;
+
             }
 
             MoveAnimator.SetBool("isMove", true);
@@ -56,6 +66,10 @@ public class AD_Move : MonoBehaviour
 
                 hitboxTransform.localPosition = new Vector3 (-hitboxStartPosition.x, hitboxStartPosition.y, hitboxStartPosition.z) ;
                 hitboxTransform.localScale = new Vector3 (-hitboxStartScale.x, hitboxStartScale.y, hitboxStartScale.z) ;
+
+                hitboxTransform_2.localPosition = new Vector3 (-hitboxStartPosition_2.x, hitboxStartPosition_2.y, hitboxStartPosition_2.z) ;
+                hitboxTransform_2.localScale = new Vector3 (-hitboxStartScale_2.x, hitboxStartScale_2.y, hitboxStartScale_2.z) ;
+
             }
 
             MoveAnimator.SetBool("isMove", true);
