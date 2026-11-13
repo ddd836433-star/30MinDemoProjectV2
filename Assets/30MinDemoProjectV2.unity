@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 1134696818}
   - component: {fileID: 1134696819}
   - component: {fileID: 1134696820}
+  - component: {fileID: 1134696821}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -673,6 +674,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attack_2
   hitboxObject_2: {fileID: 861307160}
+--- !u!114 &1134696821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134696809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0843167f786bc4d09a62ab01d72aa8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Hurt
+  playerHP: 100
+  enemyDamage: 10
 --- !u!1 &1140213310
 GameObject:
   m_ObjectHideFlags: 0
