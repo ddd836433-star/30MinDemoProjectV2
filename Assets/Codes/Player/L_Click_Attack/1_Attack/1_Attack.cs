@@ -7,9 +7,13 @@ public class Attack_1 : MonoBehaviour
     private AD_Move AD_MoveScript;
     private Space_Jump Space_JumpScript;
     private Combo_Attack Combo_AttackScript ;
+
+    public GameObject hitboxObject ;
     
     void Start()
     {
+        hitboxObject.SetActive(false) ;
+        
         AttackAnimator_1 = GetComponent<Animator>();
 
         AD_MoveScript = GetComponent<AD_Move>();
@@ -29,6 +33,18 @@ public class Attack_1 : MonoBehaviour
 
             AD_MoveScript.isAttacking = true;
 
-        } 
+        }
+    }
+
+    public void isTurnOnHitbox() 
+    {
+        hitboxObject.SetActive(true) ;
+    
+    }
+
+    public void isTurnOffHitbox() 
+    {
+        hitboxObject.SetActive(false) ;
+
     }
 }
