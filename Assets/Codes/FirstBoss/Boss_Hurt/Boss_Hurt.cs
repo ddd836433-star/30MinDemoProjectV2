@@ -21,11 +21,28 @@ public class Boss_Hurt : MonoBehaviour
 
         if (collision.gameObject.CompareTag("PlayerAttack")) {
 
-            BossAnimator.SetTrigger("isHurt") ;
-
             bossHP = bossHP - playerDamage ;
+
+            if (bossHP <= 0) {
+
+                Debug.Log("보스 사망") ;
+
+                BossAnimator.SetTrigger("isDead") ;
+
+                Invoke(nameof(isTurnOffObject), 0.5f) ;
+
+                return ;
+            }
+
+            BossAnimator.SetTrigger("isHurt") ;
 
             Debug.Log("보스 피 감소 " + bossHP) ;
         }
+    }
+
+    private void isTurnOffObject() {
+
+        gameObject.SetActive(false) ;
+
     }
 }

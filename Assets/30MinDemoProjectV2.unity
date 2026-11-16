@@ -505,7 +505,6 @@ GameObject:
   m_Component:
   - component: {fileID: 861307161}
   - component: {fileID: 861307162}
-  - component: {fileID: 861307163}
   m_Layer: 0
   m_Name: Attack_2_Hitbox
   m_TagString: PlayerAttack
@@ -583,18 +582,6 @@ PolygonCollider2D:
       - {x: -0.1792301, y: -0.32458615}
       - {x: -0.13157296, y: -0.05430609}
   m_UseDelaunayMesh: 1
---- !u!114 &861307163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861307160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d282cd3b5f8d84afa8110f9fb70fb2f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1134696809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1440,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1951513851}
   - component: {fileID: 1951513852}
-  - component: {fileID: 1951513853}
   m_Layer: 0
   m_Name: Attack_1_HitBox
   m_TagString: PlayerAttack
@@ -1537,18 +1523,6 @@ PolygonCollider2D:
       - {x: 0.36673558, y: -0.17157102}
       - {x: 0.501246, y: 0.028849542}
   m_UseDelaunayMesh: 1
---- !u!114 &1951513853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951513850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d282cd3b5f8d84afa8110f9fb70fb2f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
