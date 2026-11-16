@@ -4,7 +4,7 @@ public class Player_Hurt : MonoBehaviour
 {
     private Animator hp_Animator ;
 
-    public int playerHP = 100 ;
+    public int playerHP = 30 ;
     public int enemyDamage = 10 ;
 
     void Start() {
@@ -21,9 +21,13 @@ public class Player_Hurt : MonoBehaviour
 
             if (playerHP <= 0) {
 
+                Debug.Log("플레이어 사망") ;
+                
                 hp_Animator.SetBool("isDead", true) ;
 
-                Time.timeScale = 0f ;
+                GetComponent<AD_Move>().enabled = false ;
+
+                Invoke(nameof(isEndGame), 0.55f) ;
 
                 return ;
             }
@@ -38,5 +42,10 @@ public class Player_Hurt : MonoBehaviour
 
         hp_Animator.SetBool("isHurt", false) ;
 
+    }
+
+    private void isEndGame() {
+
+        Time.timeScale = 0f ;
     }
 }
